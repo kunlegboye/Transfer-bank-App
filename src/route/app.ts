@@ -1,9 +1,10 @@
 import createError from 'http-errors';
-import express from 'express';
+import express, {Request, Response, NextFunction} from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
+const indexRouter = require("./index");
 const app = express();
 
 // view engine setup
@@ -16,8 +17,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+
+app.use('/balance', indexRouter);
+// app.use('/transact', transactRouter);
+
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (req:Request, res:Response, next: NextFunction) {
   next(createError(404));
 });
 

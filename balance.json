@@ -1,0 +1,52 @@
+[
+  {
+    "accountNo": "0823464579",
+    "balance": 3000
+  },
+  {
+    "accountNo": "0823443534",
+    "balance": 9000
+  },
+  {
+    "accountNo": "0823466909",
+    "balance": 6000
+  },
+  {
+    "accountNo": "2823443114",
+    "balance": 10000,
+    "createdAt": "2021-08-15T11:38:51.208Z"
+  },
+  {
+    "accountNo": "2823443114",
+    "balance": 7000,
+    "createdAt": "2021-08-15T11:41:22.088Z"
+  },
+  {
+    "accountNo": "2823443114",
+    "balance": 7000,
+    "createdAt": "2021-08-15T11:41:24.714Z"
+  },
+  {
+    "accountNo": "2823443114",
+    "balance": 7000,
+    "createdAt": "2021-08-15T11:43:31.948Z"
+  },
+  {
+    "accountNo": "2823443114",
+    "balance": 7000,
+    "createdAt": "2021-08-15T11:49:13.877Z"
+  },
+  {
+    "accountNo": "2823443222",
+    "balance": 8000,
+    "createdAt": "2021-08-15T19:58:34.869Z"
+  },
+  {
+    "balance": 0,
+    "createdAt": "2021-08-15T22:18:42.628Z"
+  },
+  {
+    "balance": 0,
+    "createdAt": "2021-08-16T22:52:24.089Z"
+  }
+]
