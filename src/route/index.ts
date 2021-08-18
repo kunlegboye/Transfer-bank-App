@@ -137,7 +137,7 @@ router.post('/transfer',(req: Request, res: Response)=> {
   });
 });
 
-router.get('/transfer',(req: Request, res: Response) => {
+router.get('/transfer/trans',(req: Request, res: Response) => {
   if (dataTransact.length === 0) {
     res.status(404).json({
       status: 'Error',
