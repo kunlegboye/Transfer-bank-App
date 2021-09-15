@@ -2,15 +2,12 @@ import express, {Request, Response, NextFunction, request} from 'express';
 const server = express();
 const router = express.Router();
 import {Proto} from "./interface";
-//import {v4 as uuidv4} from "uuid";
 import { uuid } from 'uuidv4';
 import path from "path";
 import fs from 'fs';
 interface UserObject {
   [name: string]: string | number | string[];
  }
-//  let dataBase: UserObject[];
-//  let transactionPath: UserObject[];
 
 let dataBasePath =path.resolve(__dirname,"../balance.json")
 let dataBase:UserObject[] = JSON.parse( fs.readFileSync("./balance.json", "utf8") );
@@ -32,7 +29,6 @@ router.get('/', function(req:Request, res:Response, next:NextFunction){
 
 router.get('/:accountNo',(req:Request, res:Response,next:NextFunction)=>{
     const disValue = dataBase.find((el:any)=> el.accountNo === req.params.accountNo)
-    //console.log(disValue);
     const valueOfIndex = dataBase.findIndex((el:any)=> el.accountNo === req.params.accountNo)
     if(!disValue){
       res.send("user not available")
@@ -81,11 +77,6 @@ router.post('/transfer',(req: Request, res: Response)=> {
 
   const sender = dataBase.find((user) => user.accountNo == from);
   const reciever = dataBase.find((user) => user.accountNo == to);
-  // console.log(dataBase)
-  // console.log(sender)
-  // console.log(reciever)
-  // console.log(from)
-  // console.log(to)
   if (!sender || !reciever) {
     return res.status(400).json({
       status: 'fail',
